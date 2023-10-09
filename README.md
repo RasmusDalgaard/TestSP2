@@ -5,6 +5,10 @@
 ### 1.1 Computer Mouse  
 Identify the types of testing you would perform on a computer mouse, to make sure that it is of the higest quality.  
 
+I would perform Unit Testing on each of the individual parts of the mouse (mouse1, mouse2, scroll wheel, sensor etc.) Then I would perform Tntegration Tests to make sure, that the individual parts of the mouse actually work together (movement of mouse while scrolling and clicking).  
+Usability Testing could also be a great choice to ensure that the design works as intended and that the user can give feedback about improvements or things that just didn't work that well.
+Acceptance Testing helps identifying if the business requirements are met and are essential in making sure that the product is capable of performing the required tasks and thereby maintaining the higest quality. 
+Furthermore, Performance Testing could also help ensuring the higesht quality of mouse by testing its durability but also its performance during high workloads. 
 
 ### 1.2 Catastrophic Failure  
 Find a story where a software system defect had a bad outcome. Describe what happened. Can you find a test that would have prevented it?  
