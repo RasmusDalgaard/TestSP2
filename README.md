@@ -55,12 +55,14 @@ Is used for repeating a test any amount of times.
 
 * @BeforeEach, @AfterEach
 
-Is used when a method should be executed before each and every method in the test class.
+Is used when a method should be executed before each and every method in the test class.  
+
 Is used when a method should be executed after each and every method in the test class.
 
 * @BeforeAll, @AfterAll
 
-Is used when a method should be executed one time before all methods in the test class have been executed.
+Is used when a method should be executed one time before all methods in the test class have been executed.  
+
 Is used when a method should be executed one time after all methods in the test class have been executed.  
 
 * @DisplayName
