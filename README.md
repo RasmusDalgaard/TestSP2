@@ -25,6 +25,8 @@ Furthermore, early software testing and use of agile practises could help avoidi
 ## Two Katas  
 Complete the following using BDD.  
 
+[TwoKatas](https://github.com/RasmusDalgaard/TestSP2/tree/main/TestSP2/TwoKatas)
+
 ### String Unity  
 Use BDD to create a string utility with the following methods:  
 * Reverse string (aBc -> cBa)
@@ -35,9 +37,23 @@ Don't use any built-in string utility – create your own. Remember, the exercis
 use BDD, not to deliver a working utility without tests. If there are no tests in the
 solution, it won’t be accepted.  
 
+[String Utility](https://github.com/RasmusDalgaard/TestSP2/tree/main/TestSP2/TwoKatas/StringUtility.cs)  
+
+[BDD StringUtility Feature](https://github.com/RasmusDalgaard/TestSP2/blob/main/TestSP2/BDDTests/Features/StringUtility.feature)  
+
+[BDD String Utility Step Definitions](https://github.com/RasmusDalgaard/TestSP2/blob/main/TestSP2/BDDTests/StepDefinitions/StringUtilityStepDefinitions.cs)  
+
 ### Bowling Game Kata  
 Complete the Bowling Game Kata using BDD. The slides can be found here:  
 http://butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt  
+
+[Bowling Game](https://github.com/RasmusDalgaard/TestSP2/blob/main/TestSP2/TwoKatas/BowlingGame.cs)  
+
+[Bowling Game Test](https://github.com/RasmusDalgaard/TestSP2/blob/main/TestSP2/BowlingGameTests/BowlingGameTest.cs)  
+
+[BDD Bowling Game Feature](https://github.com/RasmusDalgaard/TestSP2/blob/main/TestSP2/BDDTests/Features/BowlingGame.feature)  
+
+[BDD Bowling Game Step Definitions](https://github.com/RasmusDalgaard/TestSP2/blob/main/TestSP2/BDDTests/StepDefinitions/BowlingGameStepDefinitions.cs)  
 
 ## Investigation Of Tools  
 
