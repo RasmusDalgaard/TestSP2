@@ -42,13 +42,41 @@ http://butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt
 ### JUnit 5  
 Investigate JUnit 5 (Jupiter). Explain the following, and how they are useful.  
 * @tag
+
+Is used for filtering testcases from test suites. Can be used in a test plan by only executing testcases with specific tags.  
+
 * @Disabled
+
+Disables the annotated test method or class and will not be executed.  
+
 * @RepeatedTest
+
+Is used for repeating a test any amount of times.  
+
 * @BeforeEach, @AfterEach
+
+Is used when a method should be executed before each and every method in the test class.
+Is used when a method should be executed after each and every method in the test class.
+
 * @BeforeAll, @AfterAll
+
+Is used when a method should be executed one time before all methods in the test class have been executed.
+Is used when a method should be executed one time after all methods in the test class have been executed.  
+
 * @DisplayName
+
+Is just a custom display name for the test method or class.  
+
+
 * @Nested
+
+Is used for creating nested classes, so that multiple test classes can be run from the parent class.  
+
 * assumeFalse, assumeTrue
+
+Is used for validating wether the given assumption is false and if it is the test then resumes. Otherwise it aborts the test.  
+
+Is used for validating wether the given assumption is true and if it is the test then resumes. Otherwise it aborts the test.
 
 ### Mocking Frameworks  
 Investigate mocking frameworks for your preferred language. Choose at least two
