@@ -61,7 +61,7 @@ Is used when a method should be executed after each and every method in the test
 
 * @BeforeAll, @AfterAll
 
-Is used when a method should be executed one time before all methods in the test class have been executed.  
+Is used when a method should be executed one time before all methods in the test class have been executed.    
 
 Is used when a method should be executed one time after all methods in the test class have been executed.  
 
