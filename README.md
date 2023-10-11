@@ -27,7 +27,7 @@ Complete the following using BDD.
 
 [TwoKatas](https://github.com/RasmusDalgaard/TestSP2/tree/main/TestSP2/TwoKatas)
 
-### String Unity  
+### String Utility  
 Use BDD to create a string utility with the following methods:  
 * Reverse string (aBc -> cBa)
 * Capitalize string (aBC -> ABC)
