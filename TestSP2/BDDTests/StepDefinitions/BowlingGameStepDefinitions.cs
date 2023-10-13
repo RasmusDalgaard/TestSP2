@@ -1,52 +1,88 @@
-﻿using TwoKatas;
+using TwoKatas;
+
 namespace BDDTests.StepDefinitions
 {
     [Binding]
-    public sealed class BowlingGameStepDefinitions
+    public class BowlingGameStepDefinitions
     {
-        BowlingGame game = new BowlingGame();
-        int actual = 0;
+        private BowlingGame _game;
+        private int _score;
 
-        [Given("the player knocks down 10 pins with 1 roll")]
-        public void GivenThePlayerKnocksDown10PinsWith1Roll()
+        [Given(@"fresh bowling game")]
+        public void GivenFreshBowlingGame()
         {
-            game.roll(10);
+            _game = new BowlingGame();
+            _game.score().Should().Be(0);
         }
 
-        [When("the player rolls the next 2 balls")]
-        public void WhenThePlayerRollsTheNext2Balls()
+        [When(@"the player knocks down (.*) pins with one roll")]
+        public void WhenThePlayerKnocksDownPinsWithOneRoll(int p0)
         {
-            game.roll(6);
-            game.roll(3);
+            _game.roll(p0);
         }
 
-        [Then("the amount of pins knocked down by those 2 balls is added as bonus")]
-        public void ThenTheAmountOfPinsKnockedDownByThose2BallsIsAddedAsBonus()
+        [When(@"then the player rolls the next two balls and hits (.*) pins and (.*) pins")]
+        public void WhenThenThePlayerRollsTheNextTwoBallsAndHitsPinsAndPins(int p0, int p1)
         {
-            actual = game.score();
-            Assert.Equal(28, actual);
+            _game.roll(p0);
+            _game.roll(p1);
         }
 
-        [Given("the player knocks down 10 pins with 2 rolls")]
-        public void GivenThePlayerKnocksDown10PinsWith2Rolls()
+        [Then(@"the score should be (.*)")]
+        public void ThenTheScoreShouldBe(int p0)
         {
-            game.roll(5);
-            game.roll(5);
+            _score = _game.score();
+            _score.Should().Be(p0);
         }
 
-        [When("the player rolls the next ball")]
-        public void WhenThePlayerRollsTheNextBall()
+        [Given(@"new game")]
+        public void GivenNewGame()
         {
-            game.roll(4);
+            _game = new BowlingGame();
+            _game.score().Should().Be(0);
         }
 
-        [Then("the amount of pins knocked down by that ball is added as bonus")]
-        public void ThenTheAmountOfPinsNockedDownByThatBallIsAddedAsBonus()
+        [When(@"the player knocks down (.*) pins with the first roll and (.*) with the second roll")]
+        public void WhenThePlayerKnocksDownPinsWithTheFirstRollAndWithTheSecondRoll(int p0, int p1)
         {
-            actual = game.score();
-            Assert.Equal(18, actual);
+            _game.roll(p0);
+            _game.roll(p1);
         }
 
-        
+        [When(@"then the player knocks down (.*) pins on the next roll")]
+        public void WhenThenThePlayerKnocksDownPinsOnTheNextRoll(int p0)
+        {
+            _game.roll(p0);
+        }
+
+        [Then(@"total score should be (.*)")]
+        public void ThenTotalScoreShouldBe(int p0)
+        {
+            _score = _game.score();
+            _score.Should().Be(p0);
+        }
+
+        [Given(@"bowling game")]
+        public void GivenBowlingGame()
+        {
+            _game = new BowlingGame();
+            _game.score().Should().Be(0);
+        }
+
+        [When(@"player rolls (.*) times and hits (.*) pins")]
+        public void WhenPlayerRollsTimesAndHitsPins(int p0, int p1)
+        {
+            for (int i = 0; i < p0; i++)
+            {
+                _game.roll(p1);
+            }
+        }
+
+        [Then(@"final score should be (.*)")]
+        public void ThenFinalScoreShouldBe(int p0)
+        {
+            _score = _game.score();
+            _score.Should().Be(p0);
+        }
     }
 }

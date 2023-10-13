@@ -1,13 +1,21 @@
 ﻿Feature: BowlingGame
 
-@mytag
+@Strike
 Scenario: Strike
-	Given the player knocks down 10 pins with 1 roll
-	When the player rolls the next 2 balls
-	Then the amount of pins knocked down by those 2 balls is added as bonus
+	Given fresh bowling game
+	When the player knocks down 10 pins with one roll
+	And then the player rolls the next two balls and hits 6 pins and 4 pins
+	Then the score should be 30
 
-@mytag
+@Spare
 Scenario: Spare
-	Given the player knocks down 10 pins with 2 rolls 
-	When the player rolls the next ball
-	Then the amount of pins knocked down by that ball is added as bonus
+	Given new game
+	When the player knocks down 6 pins with the first roll and 4 with the second roll 
+	And then the player knocks down 4 pins on the next roll
+	Then total score should be 18
+
+@GutterGame
+Scenario: Gutter Game
+	Given bowling game
+	When player rolls 20 times and hits 0 pins
+	Then final score should be 0
